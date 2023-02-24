@@ -25,8 +25,7 @@ public class RedisCacheConfig {
                 );
 
         HashMap<String, RedisCacheConfiguration> configMap = new HashMap<>();
-        configMap.put("userAgeCache", RedisCacheConfiguration.defaultCacheConfig())
-                .entryTtl(Duration.ofSeconds(5));
+        configMap.put("userAgeCache", RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofSeconds(5)));
 
         return RedisCacheManager.RedisCacheManagerBuilder
                 .fromConnectionFactory(connectionFactory)
