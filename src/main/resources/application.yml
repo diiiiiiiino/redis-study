@@ -1,0 +1,8 @@
+spring:
+  cache:
+    type: redis #todo : @Cacheable 설정
+  session:
+    storage-type: redis #todo : 세션 스토리지 설정
+  redis:
+    host: localhost
+    port: 6379
